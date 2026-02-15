@@ -6,6 +6,8 @@
 
 **Intended use:** This app looks to create a reproducible pipeline for researchers to blind data / image files. It is designed for blinding experimental datasets prior to analysis to reduce bias. The easy-to-use GUI interface is cross-compatible with macOS and Windows, allowing for easy, reproducible access to blinding various file types. 
 
+**For questions and Issues:** Please post an issues request on GitHub or email jennavc@unc.edu. 
+
 
 **Current version:** 3.2
 
