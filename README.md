@@ -81,7 +81,10 @@ User clicks and open the respective exe/app file and the program GUI launches.
 
 6) User has two logs in the original speicifed folder:
    - **_blinding_log.csv:** The crash protection log with all actions saved
-   - **Blinding_Key.csv:** The easy to read key that allows translations from old file name to new file name. It also maps the original path name to be saved. 
+   - **Blinding_Key.csv:** The easy to read key that allows translations from old file name to new file name. It also maps the original path name to be saved.
+  
+
+## General Workflow of the code
 
 ---
 
