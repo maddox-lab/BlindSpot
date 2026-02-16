@@ -189,9 +189,9 @@ If you use BlindSpot in your research, please cite it at: *insert Micropub citat
 
 ## Latest releases:
 
-Windows: /releases/latest/download/BlindSpot-Win.zip
+Windows: [/releases/latest/download/BlindSpot-Win.zip](https://github.com/maddox-lab/blindspot/releases/tag/Windows-Exe)
 
-Mac: /releases/latest/download/BlindSpot-mac.zip
+Mac: [/releases/latest/download/BlindSpot-mac.zip](https://github.com/user-attachments/files/25329204/BlindSpot-mac.zip)
 
 
 ## Acknowledgements:
