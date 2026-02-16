@@ -14,6 +14,13 @@
 *Previous versions are available upon request* 
 
 
+## Latest releases:
+
+Windows: [Latest Windows release](https://github.com/user-attachments/files/25328259/BlindSpot-Win.zip)
+
+Mac: [Latest macOS release](https://github.com/user-attachments/files/25329204/BlindSpot-mac.zip)
+
+
 ## How It's Made:
 
 **Tech used:** Python 3.13
@@ -186,12 +193,6 @@ Afterwards, the user can map their newly blinded files to the Blinding_key.csv t
 
 If you use BlindSpot in your research, please cite it at: *insert Micropub citation*
 
-
-## Latest releases:
-
-Windows: [Latest Windows release](https://github.com/user-attachments/files/25328259/BlindSpot-Win.zip)
-
-Mac: [Latest Mac release](https://github.com/user-attachments/files/25329204/BlindSpot-mac.zip)
 
 
 ## Acknowledgements:
