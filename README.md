@@ -187,6 +187,13 @@ Afterwards, the user can map their newly blinded files to the Blinding_key.csv t
 If you use BlindSpot in your research, please cite it at: *insert Micropub citation*
 
 
+## Latest releases:
+
+Windows: /releases/latest/download/BlindSpot-Win.zip
+
+Mac: /releases/latest/download/BlindSpot-mac.zip
+
+
 ## Acknowledgements:
 
 This version of the code was written by Jenna Vesey. The code was inspired by Siddharth Sankaranarayanan's original blinding code. 
