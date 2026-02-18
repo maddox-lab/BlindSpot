@@ -83,10 +83,11 @@ User clicks and open the respective exe/app file and the program GUI launches.
    - **Blinding_Key.csv:** The easy to read key that allows translations from old file name to new file name. It also maps the original path name to be saved.
 
 
---- 
   
 
-## General Workflow of the code
+## Technical Workflow of the code
+
+This shows the step by step for the technical side of the code instead of the user's workflow for reference
 
 ---
 
@@ -192,7 +193,6 @@ Contains
 
 Afterwards, the user can map their newly blinded files to the Blinding_key.csv to determine the corresponding original file name when unblinding is required. The result is a reproducible and user-friendly blinding pipeline suitable for experimental data handling. 
 
----
 
 ## Citations:
 
