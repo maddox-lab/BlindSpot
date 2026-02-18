@@ -41,7 +41,8 @@ The original code BlindSpot3_2.py is available on the repository as well. This c
 
 User clicks and open the respective exe/app file and the program GUI launches. 
 
---- 
+---
+
 
 1) User inputs
    - **Target Folder:**  The folder containing the files to be blinded
@@ -50,16 +51,15 @@ User clicks and open the respective exe/app file and the program GUI launches.
    - **Preserve Original File Names:** Grants the user the option to keep the original files in the original location and create a blinded copy. If this option is not selected, a warning message will pop up encouraging it to be saved or the files will be rewritten. The user has to actively decide to continue the run regardless. It is recommended to have a backup prior to running this program. 
    - **Subfolder Search:** Allows the user to include all subfolders within the specified directory
   
---- 
+
 
 2) User hits run and the program starts
    - If safe mode is not checked, the file will put up a pop up box saying: "Warning: BlindSpot. This will rename/move files with the target extension. If safe mode is OFF, original names won't remain. Continue?". The user has to press okay to continue, if they do not want this, pressing cancel brings the user back to the main page. 
 
----
 
 3)  Loading bar shows progress and estimates finishing time
 
----
+
 
 4) A pop up comes up demonstrating the results of the run:
    - **Blinding Done!**
@@ -73,11 +73,10 @@ User clicks and open the respective exe/app file and the program GUI launches.
    - **Elasped:** The amount of time it took
    - **Mappings:** How many mappings were created between the blinded file name and the original file name
 
----
+
 
 5) A fun randomly generated quote / pop culture message appears in it's own pop up box
 
----- 
 
 6) User has two logs in the original speicifed folder:
    - **_blinding_log.csv:** The crash protection log with all actions saved
@@ -102,7 +101,7 @@ When the app is launched, the user is prompted to provide the following inputs:
 
 The goal of this is to allow the user to customize their blinding process based on their specific needs.  
 
----
+
 
 ### 2) Preprocessing and Validation
 
@@ -128,7 +127,7 @@ Two CSV files are created at this stage:
    - Blinding_Key.csv
 
 
-----
+
 
 ### 3) File Processing and Blinding 
 
@@ -138,7 +137,7 @@ For each file identified:
    - Files are renamed using the UUID package, keeping the final 8 digits of the UUID in order to keep it random but concise
 
 
----
+
 
 ### 4) Logging and Progress Tracking
 
@@ -150,7 +149,7 @@ During the execution of the program, the application:
 
 All of these actions are incrementally saved into _blinding_log.csv
 
----
+
 
 ### 5) Output 
 
@@ -187,7 +186,7 @@ Contains
    - Corresponding Blinded File Name
    - Path of the original file in relation to the parent directory for easy tracking
 
----
+
 
 ### 6) Post-Blinding 
 
