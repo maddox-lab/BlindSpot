@@ -199,6 +199,13 @@ Afterwards, the user can map their newly blinded files to the Blinding_key.csv t
 If you use BlindSpot in your research, please cite it at: *insert Micropub citation*
 
 
+## Important Notes:
+
+1) I recommend backing up files before running this. Although people testing it have not suffered any data lost, data lost can happen and we take no responsibility for this.
+2) Some of the fun quotes at the end are from pop culture. I take no ownership of those quotes and they belong to their respective creators.
+3) If Microtubules being the best cytoskeleton element at the end makes you sad, please note that the person who oversaw this being published insisted it stayed.
+4) This does not change actual image data acquired, so to maximize its efficacy, please try to keep imaging procedures as uniform as possible to help decrease bias as much as possible. 
+
 
 ## Acknowledgements:
 
