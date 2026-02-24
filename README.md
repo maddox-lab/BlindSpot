@@ -125,7 +125,7 @@ _This function selected at the top unblinds the blinded file data produced by Bl
 6) A fun randomly generated quote / pop culture message appears in it's own pop up box
 
 
-7) User has one logs in the original speicifed folder:
+7) User has one logs in the user specified unblinded file folder:
    - **_unblinding_log.csv:** A log of the unblinding command that demonstrates errors and shows conversion if needed by the user 
 
 
