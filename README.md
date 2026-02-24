@@ -86,7 +86,7 @@ _This function selected at the top blinds file data_
    - **_blinding_log.csv:** The crash protection log with all actions saved
    - **Blinding_Key.csv:** The easy to read key that allows translations from old file name to new file name. It also maps the original path name to be saved.
   
-
+---
 
 ### Unblinding Function
 
@@ -139,6 +139,7 @@ This shows the step by step for the technical side of the code instead of the us
 
 
 ### Blinding Program technical workflow 
+
 
 ### 1) User Input via the user interface
 
