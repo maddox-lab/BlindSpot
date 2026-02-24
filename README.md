@@ -143,6 +143,112 @@ This shows the step by step for the technical side of the code instead of the us
 ### 1) User Input via the user interface
 
 When the app is launched, the user is prompted to provide the following inputs: 
+  - **Target Folder:**  The folder containing the files to be blinded
+   - **File Extension:** The user types in the file extension of their choice (i.e. tif, png, jpeg, nd2, txt, etc.). This does not require a period but is spelling specific
+   - **Output Organization:** Grants the user the option to move all the blinded files into one folder
+   - **Preserve Original File Names:** Grants the user the option to keep the original files in the original location and create a blinded copy. If this option is not selected, a warning message will pop up encouraging it to be saved or the files will be rewritten. The user has to actively decide to continue the run regardless. It is recommended to have a backup prior to running this program. 
+   - **Subfolder Search:** Allows the user to include all subfolders within the specified directory
+
+The goal of this is to allow the user to customize their blinding process based on their specific needs.  
+
+
+
+### 2) Preprocessing and Validation
+
+After the user clicks submit, the program performs some validation steps:
+
+   - Confirms files of the specified type exist in the specified directory
+   - Automatically appends a '.' to the file extension if the user did not add it
+   - Corrects file-extension case sensitivity
+   - Halts the program if no files of the specified type are found in the folder
+
+
+Once the program finishes these steps, the program initializes required variables. 
+
+
+Important Implementation details:
+   - Path files are managed using pathlib to ensure cross-platform compatibility
+   - File discovery uses glob, also allowing cross-platform compatibility
+   - All relevant file paths are stored internally with the data if they will be copied or moved
+
+
+Two CSV files are created at this stage: 
+   - _blinding_log.csv
+   - Blinding_Key.csv
+
+
+
+
+### 3) File Processing and Blinding 
+
+For each file identified:
+   - The program checks _blinding_log.csv to make sure the specified file has not already been blinded
+   - If selected, the original file is duplicated to protect the original location and name of the initial file
+   - Files are renamed using the UUID package, keeping the final 8 digits of the UUID in order to keep it random but concise
+
+
+
+
+### 4) Logging and Progress Tracking
+
+During the execution of the program, the application:
+
+   - Tracks and records time steps for each of the blinding stages
+   - Updates the progress bar to provide an easy way to let the user know how many are done
+   - Only commits file name changes when the file is considered "done"
+
+All of these actions are incrementally saved into _blinding_log.csv
+
+
+
+### 5) Output 
+
+On completion of the run, two CSV files are saved in the original specified directory
+
+##### _blinding_log.csv 
+
+Records a detailed trail of the code, including:
+   - Timestamp
+   - Original File Path
+   - Original File Name
+   - New Blinded File Name
+   - Action type (Starting, keyed, copied, moved, pending, error, aborted, lost, finalized, and done)
+   - File location in the full file path
+
+##### Action type terms 
+
+   - Starting: The start of the file run
+   - Keyed: File given a blind name 
+   - Copied: Original is copied to its original path
+   - Moved: File relocated to the 'Blind Files' folder if the user selected this
+   - Pending: Intermediate step logged in case of a crash
+   - Error: File processing failed
+   - Aborted: A file had an issue and the software skips it without crashing 
+   - Lost: The file and the rename are unable to be located by the code (recommend maintaining a backup)
+   - Finalized: After a crash, files that were only partially finished processing successfully get reprocessed on a rerun
+   - Done: All requested actions have been completed successfully
+
+
+##### Blinding_Key.csv
+
+Contains 
+   - Original File Name
+   - Corresponding Blinded File Name
+   - Path of the original file in relation to the parent directory for easy tracking
+
+
+
+### 6) Post-Blinding 
+
+Afterwards, the user can map their newly blinded files to the Blinding_key.csv to determine the corresponding original file name when unblinding is required. The result is a reproducible and user-friendly blinding pipeline suitable for experimental data handling. 
+
+---
+
+### Unblinding Program technical workflow 
+
+### 1) User Input via the user interface
+
+When the app is launched, the user is prompted to provide the following inputs: 
    - **Target Directory:**  The folder containing the files to be blinded
    - **File Extension:** The user types in the file extension of their choice (i.e. tif, png, jpeg, nd2, txt, etc.)
    - **Output Organization:** Grants the user the option to move all the blinded files into one folder
@@ -241,6 +347,7 @@ Contains
 ### 6) Post-Blinding 
 
 Afterwards, the user can map their newly blinded files to the Blinding_key.csv to determine the corresponding original file name when unblinding is required. The result is a reproducible and user-friendly blinding pipeline suitable for experimental data handling. 
+
 
 
 ## Citations:
