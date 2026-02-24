@@ -1,6 +1,6 @@
 # *BlindSpot*
 
-**Author: Jenna Vesey** 
+**Author: Jenna Vesey**  (@Jenna-VC)
 
 **Link to project:** https://github.com/maddox-lab/blindspot
 
