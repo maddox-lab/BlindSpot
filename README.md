@@ -250,27 +250,24 @@ Afterwards, the user can map their newly blinded files to the Blinding_key.csv t
 ### 1) User Input via the user interface
 
 When the app is launched, the user is prompted to provide the following inputs: 
-   - **Target Directory:**  The folder containing the files to be blinded
-   - **File Extension:** The user types in the file extension of their choice (i.e. tif, png, jpeg, nd2, txt, etc.)
-   - **Output Organization:** Grants the user the option to move all the blinded files into one folder
-   - **Preserve Original File Names:** Grants the user the option to keep the original files in the original location and create a blinded copy
-   - **Subfolder Search:** Allows the user to include all subfolders within the specified directory
+   - **Target Directory:**  The folder containing the files to be unblinded
+   - **Blinding Key Location:** User uploads the blinding key for that specific file folder
+   - **Output Organization:** Grants the user the option to move the unblinded folder 
+   - **Preserve Original File Names:** The unblinded file can replace the original ones if they are in the same folder so there are not two copies
 
-The goal of this is to allow the user to customize their blinding process based on their specific needs.  
+The goal of this is to allow the user to easily unblind the blinded data files within a specific directory and move to an organized structure. 
 
 
 
 ### 2) Preprocessing and Validation
 
-After the user clicks submit, the program performs some validation steps:
+After the user clicks submit, the program undergoes a series of steps. 
 
-   - Confirms files of the specified type exist in the specified directory
-   - Automatically appends a '.' to the file extension if the user did not add it
-   - Corrects file-extension case sensitivity
-   - Halts the program if no files of the specified type are found in the folder
+   - Confirms files in the folder are found in the blinding key
+   - Loops through all subdirectories for confirmation
+   - Creates the unblinding log if it does not exist
 
-
-Once the program finishes these steps, the program initializes required variables. 
+Once the program finishes these steps, the program initializes and gets ready to run. 
 
 
 Important Implementation details:
@@ -279,76 +276,39 @@ Important Implementation details:
    - All relevant file paths are stored internally with the data if they will be copied or moved
 
 
-Two CSV files are created at this stage: 
-   - _blinding_log.csv
-   - Blinding_Key.csv
 
 
-
-
-### 3) File Processing and Blinding 
+### 3) File Processing and Unblinding 
 
 For each file identified:
-   - The program checks _blinding_log.csv to make sure the specified file has not already been blinded
-   - If selected, the original file is duplicated to protect the original location and name of the initial file
-   - Files are renamed using the UUID package, keeping the final 8 digits of the UUID in order to keep it random but concise
-
-
-
-
-### 4) Logging and Progress Tracking
-
-During the execution of the program, the application:
-
-   - Tracks and records time steps for each of the blinding stages
-   - Updates the progress bar to provide an easy way to let the user know how many are done
-   - Only commits file name changes when the file is considered "done"
-
-All of these actions are incrementally saved into _blinding_log.csv
-
-
+   - The program checks _unblinding_log.csv to make sure the specified file has not already been unblinded and skips
+   - Compares all the files in the folder to the Blinding_Key.csv and determines which need to be unblinded within that specified directory
+   - It then will rename the file with original unblinded name and move it to the specified directory
+   - The unblinding log is updated s the system is tracked
 
 ### 5) Output 
 
-On completion of the run, two CSV files are saved in the original specified directory
+On completion of the run, the _unblinding_log.csv
 
-##### _blinding_log.csv 
+##### _uncblinding_log.csv 
 
 Records a detailed trail of the code, including:
    - Timestamp
-   - Original File Path
-   - Original File Name
-   - New Blinded File Name
-   - Action type (Starting, keyed, copied, moved, pending, error, aborted, lost, finalized, and done)
-   - File location in the full file path
+   - Old File Path: The location of the blinded file 
+   - Old File Name: The name of the blinded file
+   - New file name: the name of the Unblinded file aka the original file name
+   - Action type (Unblinded, error skipped, error missing)
+   - Message of error or if it is unblinded
 
 ##### Action type terms 
 
-   - Starting: The start of the file run
-   - Keyed: File given a blind name 
-   - Copied: Original is copied to its original path
-   - Moved: File relocated to the 'Blind Files' folder if the user selected this
-   - Pending: Intermediate step logged in case of a crash
-   - Error: File processing failed
-   - Aborted: A file had an issue and the software skips it without crashing 
-   - Lost: The file and the rename are unable to be located by the code (recommend maintaining a backup)
-   - Finalized: After a crash, files that were only partially finished processing successfully get reprocessed on a rerun
-   - Done: All requested actions have been completed successfully
+   - Unblinded: If the file has been succesfully unblinded
+   - Error Skipped: If the file has already been unblinded, the program skips it
+   - Error missing: If the file is missing the program will sikp it 
 
+### 6) Post-Unblinding 
 
-##### Blinding_Key.csv
-
-Contains 
-   - Original File Name
-   - Corresponding Blinded File Name
-   - Path of the original file in relation to the parent directory for easy tracking
-
-
-
-### 6) Post-Blinding 
-
-Afterwards, the user can map their newly blinded files to the Blinding_key.csv to determine the corresponding original file name when unblinding is required. The result is a reproducible and user-friendly blinding pipeline suitable for experimental data handling. 
-
+The user can see the log where the unblinded files are and see if they were unblinded. It can be compared to the blinding key to guarentee accuracy. 
 
 
 ## Citations:
