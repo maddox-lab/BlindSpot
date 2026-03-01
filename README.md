@@ -1,5 +1,8 @@
 # *BlindSpot*
 
+
+BlindSpot: A cross platform tool for reproducible file name blinding that limits observer bias. 
+
 **Author: Jenna Vesey**  (@Jenna-VC)
 
 **Link to project:** https://github.com/maddox-lab/blindspot
@@ -19,6 +22,21 @@
 Windows: *Updated once the final one is confirmed*
 
 Mac: *Updated once the final one is confirmed*
+
+## Quick Start:
+
+
+### Blinding function
+1. Download the latest release of Blindspot
+2. Open BlindSpot and navigate to blinding tab
+3. Select your target folder and extension type
+4. Click run
+
+### Unblinding function
+1. Download the latest release of BlindSpot
+2. Open BlindSpot and navigate to unblinding tab
+3. Select your target folder and the blinding_key.csv
+4. Click run
 
 
 ## How It's Made:
