@@ -135,9 +135,9 @@ This section shows how _BlindSpot_ can be implemented into command line function
 
 ---
 
-When the information is downloaded from the github for all the program. If the user navigates to the BlindSpot folder containing the spec and toml file, they can add it to their path using [pip3 install -e .]. This indicates that the program will add the command line function to their terminal. 
+When the information is downloaded from the github for all the program. If the user navigates to the BlindSpot folder containing the spec and toml file, they can add it to their path using ```pip3 install -e . ```. This indicates that the program will add the command line function to their terminal. 
 
-When run from the terminal, the following commands are present and can be found by running the command [blindspot --help]: 
+When run from the terminal, the following commands are present and can be found by running the command ``` blindspot --help ```: 
 
               BlindSpot — The Amy Maddox Lab, UNC Chapel Hill
               Command Line Usage:
@@ -321,7 +321,7 @@ For each file identified:
    - The program checks _unblinding_log.csv to make sure the specified file has not already been unblinded and skips
    - Compares all the files in the folder to the Blinding_Key.csv and determines which need to be unblinded within that specified directory
    - It then will rename the file with original unblinded name and move it to the specified directory
-   - The unblinding log is updated s the system is tracked
+   - The unblinding log is updated and the the file is tracked
 
 ### 5) Output 
 
