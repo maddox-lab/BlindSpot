@@ -327,7 +327,7 @@ For each file identified:
 
 On completion of the run, the _unblinding_log.csv
 
-##### _uncblinding_log.csv 
+##### _unblinding_log.csv 
 
 Records a detailed trail of the code, including:
    - Timestamp
