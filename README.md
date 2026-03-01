@@ -37,7 +37,7 @@ BlindSpot can be downloaded as a zipped .exe file (Windows) or a zipped .app fil
 
 The original package of code is located is available on the repository as well. The author has previous versions that are available upon request. This code was compiled using PyInstaller on the command line and was tested with the attached pytest codes. This requires the packages: os, csv, uuid, time, shutil, random, threading, pathlib, tkinter, datetime, webbrowser, and sys. All of these packages are compatible with Python v 3.13. 
 
-## To Use:
+## To Use (GUI):
 
 User clicks and open the respective exe/app file and the program GUI launches. 
 
@@ -127,6 +127,43 @@ _This function selected at the top unblinds the blinded file data produced by Bl
 
 7) User has one logs in the user specified unblinded file folder:
    - **_unblinding_log.csv:** A log of the unblinding command that demonstrates errors and shows conversion if needed by the user 
+
+
+## To Use (Command Line):
+
+This section shows how _BlindSpot_ can be implemented into command line functionality. 
+
+---
+
+When the information is downloaded from the github for all the program. If the user navigates to the BlindSpot folder containing the spec and toml file, they can add it to their path using [pip3 install -e .]. This indicates that the program will add the command line function to their terminal. 
+
+When run from the terminal, the following commands are present and can be found by running the command [blindspot --help]: 
+
+              BlindSpot — The Amy Maddox Lab, UNC Chapel Hill
+              Command Line Usage:
+
+              blindspot                          Open the GUI
+              blindspot --blinder [options]      Blind files from the command line
+              blindspot --unblinder [options]    Unblind files from the command line
+
+              Blinder options:
+                --base_path PATH       Folder containing files to blinded (required)
+                --extension EXT        File extension to blind, e.g. nd2 (required)
+                --move_to_blind        Move files to a 'Blind Files' folder
+                --clone_og             Copy originals before blinding (safe mode) *Recommended*
+                --include_subdirs      Include subfolders within specified directory
+
+            Unblinder options:
+                --base_folder PATH     Folder containing blinded files (required)
+                --blinding_key PATH    Path to Blinding_Key.csv (required)
+                --move_unblind_to PATH Destination folder for unblinded files
+                --overwrite            Overwrite existing files
+
+
+
+            Examples:
+              blindspot --blinder --base_path C:/data --extension nd2 --clone_og
+              blindspot --unblinder --base_folder C:/data --blinding_key C:/data/Blinding_Key.csv
 
 
 
