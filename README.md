@@ -4,21 +4,21 @@
 
 **Link to project:** https://github.com/maddox-lab/blindspot
 
-**Intended use:** This app looks to create a reproducible pipeline for researchers to blind data / image files. It is designed for blinding experimental datasets prior to analysis to reduce bias. The easy-to-use GUI interface is cross-compatible with macOS and Windows, allowing for easy, reproducible access to blinding various file types. 
+**Intended use:** This app looks to create a reproducible pipeline for researchers to blind data / image files. It is designed for blinding experimental datasets prior to analysis to reduce bias. The easy-to-use GUI interface is cross-compatible with macOS and Windows, allowing for easy, reproducible access to blinding various file types. BlindSpot modifies filenames only and does not alter file contents. 
 
 **For questions and Issues:** Please post an issues request on GitHub or email jennavc@unc.edu. 
 
 
 **Current version:** 1.0
 
-*Previous versions are available upon request* 
+*Previous iterations of the code are available upon request* 
 
 
 ## Latest releases:
 
-Windows: [Latest Windows release](https://github.com/user-attachments/files/25328259/BlindSpot-Win.zip)
+Windows: *Updated once the final one is confirmed*
 
-Mac: [Latest macOS release](https://github.com/user-attachments/files/25329204/BlindSpot-mac.zip)
+Mac: *Updated once the final one is confirmed*
 
 
 ## How It's Made:
@@ -33,7 +33,7 @@ The entire program was built using Python in VS Code. The program uses Tkinter t
 
 ## Installation
 
-BlindSpot can be downloaded as a zipped .exe file (Windows) or a zipped .app file (macOS) from this gihub repository. If this is the perferred method of download, no python or installation of any packages are required for use. Exe files will be updated and downloaded from the release folder for the latest version. 
+BlindSpot can be downloaded as a zipped .exe file (Windows) or a zipped .app file (macOS) from this gihub repository. If this is the perferred method of download, no python or installation of any packages are required for use. Exe files will be updated and downloaded from the release folder for the latest version. It also can be used with the command line feature. Please go to the **To Use: (Command Line)**  section below in order to see intallation and use instructions. 
 
 The original package of code is located is available on the repository as well. The author has previous versions that are available upon request. This code was compiled using PyInstaller on the command line and was tested with the attached pytest codes. This requires the packages: os, csv, uuid, time, shutil, random, threading, pathlib, tkinter, datetime, webbrowser, and sys. All of these packages are compatible with Python v 3.13. 
 
@@ -358,7 +358,8 @@ If you use BlindSpot in your research, please cite it at: *insert Micropub citat
 1) Users are strongly encouraged to maintain backups prior to use. 
 2) Some of the fun quotes at the end are from pop culture. I take no ownership of those quotes and they belong to their respective creators.
 3) If Microtubules being the best cytoskeleton element at the end makes you sad, please note that the person who oversaw this being published insisted it stayed.
-4) This does not change actual image data acquired, so to maximize its efficacy, please try to keep imaging procedures as uniform as possible to help decrease bias as much as possible. 
+4) This does not change actual image data acquired, so to maximize its efficacy, please try to keep imaging procedures as uniform as possible to help decrease bias as much as possible.
+5) Future updates will avoid updating the structure of the blinding_key.csv file, attempting to keep any parts of the workflow more consistant. 
 
 
 ## Acknowledgements:
