@@ -16,6 +16,15 @@ BlindSpot: A cross platform tool for reproducible file name blinding that limits
 
 *Previous iterations of the code are available upon request* 
 
+## Who should use this?
+
+Ideal for:
+ - Microscopy image analysis
+ - Multi-user scoring pipelines
+ - Blinded phenotype scoring
+ - Reproducible pipelines
+ - Scientists at any stage of their career
+
 
 ## Latest releases:
 
@@ -23,8 +32,9 @@ Windows: *Updated once the final one is confirmed*
 
 Mac: *Updated once the final one is confirmed*
 
-## Quick Start:
 
+
+## Quick Start:
 
 ### Blinding function
 1. Download the latest release of Blindspot
