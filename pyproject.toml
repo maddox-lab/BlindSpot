@@ -1,0 +1,32 @@
+[project]
+name = "blindspot"
+version = "4.0.0"
+description = ""
+authors = [
+    {name = "jenna-vc",email = "jennavc@unc.edu"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pillow"
+]
+
+[project.scripts]
+blindspot = "blindspot.__main__:main"
+
+[tool.poetry]
+packages = [{include = "blindspot", from = "src"}]
+include = ["src/blindspot/assets/splash.gif"]
+
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pyinstaller (>=6.19.0,<7.0.0)"
+]
+
+[project.urls]
+Repository = "https://github.com/maddox-lab/BlindSpot"
