@@ -1,7 +1,7 @@
 # *BlindSpot*
 
 
-BlindSpot: A cross platform tool for reproducible file name blinding that limits observer bias. 
+_BlindSpot_: A cross platform tool for reproducible file name blinding that limits observer bias. 
 
 **Author: Jenna Vesey**  (@Jenna-VC)
 
@@ -401,3 +401,4 @@ The Maddox Lab website can be accessed via this link: https://asmlab.web.unc.edu
 I would like to give a special thank you to Linnea Wethekam, Amy Liu, and Siddharth Sankaranarayanan for their testing, feedback, and support.
 
 LICENSE: MIT License
+
