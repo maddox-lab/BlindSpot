@@ -1,2 +1,0 @@
-[console_scripts]
-blindspot = blindspot.__main__:main
