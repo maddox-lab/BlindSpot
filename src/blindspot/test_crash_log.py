@@ -136,7 +136,7 @@ def test_build_journal(tmp_path):
 
     assert journal_state["old.jpeg"]["done"] is False
     assert journal_state["old.jpeg"]["pending"]["TxtID"] == "73291"
-    assert journal_state["old.jpeg"]["pending"]["dest"] == "dest"
+    assert journal_state["old.jpeg"]["pending"]["dest"] == normalize_path("DEST")
     assert journal_state["old.jpeg"]["pending"]["new"] == "new-name"
 
 
@@ -725,3 +725,4 @@ def test_rerun(tmp_path, monkeypatch):
         assert new_path.exists()
         assert new_path.name != orig_path.name
         assert new_path.suffix.lower() == ".nd2"
+
