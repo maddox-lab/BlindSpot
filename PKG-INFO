@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: blindspot
+Version: 4.0.0
+Summary: 
+Author: jenna-vc
+Author-email: jennavc@unc.edu
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: pillow
+Project-URL: Repository, https://github.com/maddox-lab/BlindSpot
+Description-Content-Type: text/markdown
+
+
