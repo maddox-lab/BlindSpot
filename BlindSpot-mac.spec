@@ -35,13 +35,13 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='src/blindspot/assets/lil_timmy.icns',
+    icon='src/blindspot/assets/lil_timmy_1024.icns',
 )
 
 app = BUNDLE(
     exe,
     name='BlindSpot.app',
-    icon='src/blindspot/assets/lil_timmy.icns',
+    icon='src/blindspot/assets/lil_timmy_1024.icns',
     bundle_identifier='com.amymaddoxlab.blindspot',
     info_plist={
         'NSHighResolutionCapable': True,

@@ -28,9 +28,9 @@ Ideal for:
 
 ## Latest releases:
 
-Windows: [Windows v 1.0.0 Release](https://github.com/maddox-lab/BlindSpot/releases/tag/Windows-Exe)
+Windows: Can be found on the github releases
 
-Mac: [macOS v 1.0.0 Release](https://github.com/maddox-lab/BlindSpot/releases/tag/Mac-release)
+Mac: Can be found on the github releases
 
 
 
@@ -402,5 +402,3 @@ The Maddox Lab website can be accessed via this link: https://asmlab.web.unc.edu
 I would like to give a special thank you to Linnea Wethekam, Amy Liu, and Siddharth Sankaranarayanan for their testing, feedback, and support.
 
 LICENSE: Released under the MIT License. Permission is granted to use, copy, modify, and distribute this software with attribution.
-
-

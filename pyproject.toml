@@ -1,6 +1,6 @@
 [project]
 name = "blindspot"
-version = "1.0.0"
+version = "1.0.3"
 description = "Microscopy image blinding tool with GUI and CLI"
 authors = [{ name = "jenna-vc", email = "jennavc@unc.edu" }]
 readme = "README.md"
