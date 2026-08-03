@@ -12,7 +12,7 @@ BlindSpot: A cross platform tool for reproducible file name blinding that limits
 **For questions and Issues:** Please post an issues request on GitHub or email jennavc@unc.edu. 
 
 
-**Current version:** 1.0.0
+**Current version:** 1.0.3
 
 *Previous iterations of the code are available upon request* 
 
