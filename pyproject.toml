@@ -3,7 +3,7 @@ requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "BlindSpot-bio"
+name = "Bio-BlindSpot"
 version = "1.0.3"
 description = "Microscopy image blinding tool with GUI and CLI"
 authors = [
