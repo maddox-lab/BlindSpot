@@ -1,0 +1,30 @@
+[project]
+name = "blindspot"
+version = "1.0.3"
+description = "Microscopy image blinding tool with GUI and CLI"
+authors = [{ name = "jenna-vc", email = "jennavc@unc.edu" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pillow"]
+
+[project.scripts]
+blindspot = "blindspot.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/maddox-lab/BlindSpot"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+blindspot = ["assets/*.gif"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = ["pyinstaller>=6.19,<7.0"]
