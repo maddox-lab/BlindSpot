@@ -7,24 +7,54 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: blindspot
 
     permissions:
       id-token: write
       contents: read
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
       - name: Install build tools
         run: python -m pip install --upgrade build
 
+      - name: Clean previous builds
+        run: rm -rf dist build *.egg-info src/*.egg-info
+
       - name: Build package
         run: python -m build
+
+      - name: Verify package metadata
+        run: |
+          ls -lh dist
+          python - <<'PY'
+          import glob
+          import zipfile
+
+          wheels = glob.glob("dist/*.whl")
+
+          if len(wheels) != 1:
+              raise RuntimeError(f"Expected one wheel, found: {wheels}")
+
+          with zipfile.ZipFile(wheels[0]) as archive:
+              metadata_file = next(
+                  name
+                  for name in archive.namelist()
+                  if name.endswith(".dist-info/METADATA")
+              )
+              metadata = archive.read(metadata_file).decode()
+
+          for line in metadata.splitlines():
+              if line.startswith(("Name:", "Version:")):
+                  print(line)
+          PY
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
