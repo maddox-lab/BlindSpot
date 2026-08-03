@@ -1,30 +1,42 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "BlindSpot-bio"
 version = "1.0.3"
 description = "Microscopy image blinding tool with GUI and CLI"
-authors = [{ name = "jenna-vc", email = "jennavc@unc.edu" }]
+authors = [
+    { name = "jenna-vc", email = "jennavc@unc.edu" }
+]
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["pillow"]
+dependencies = [
+    "Pillow"
+]
 
 [project.scripts]
 blindspot = "blindspot.__main__:main"
 
 [project.urls]
 Repository = "https://github.com/maddox-lab/BlindSpot"
+Issues = "https://github.com/maddox-lab/BlindSpot/issues"
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "twine",
+    "pyinstaller>=6.19,<7.0"
+]
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
+include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-blindspot = ["assets/*.gif"]
-
-[build-system]
-requires = ["setuptools>=61"]
-build-backend = "setuptools.build_meta"
-
-[dependency-groups]
-dev = ["pyinstaller>=6.19,<7.0"]
+blindspot = [
+    "assets/*.gif"
+]
