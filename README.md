@@ -7,7 +7,7 @@ BlindSpot: A cross platform tool for reproducible file name blinding that limits
 
 **Link to project:** https://github.com/maddox-lab/blindspot
 
-**Intended use:** This app looks to create a reproducible pipeline for researchers to blind data / image files. It is designed for blinding experimental datasets prior to analysis to reduce bias. The easy-to-use GUI interface is cross-compatible with macOS and Windows, allowing for easy, reproducible access to blinding various file types. BlindSpot modifies filenames only and does not alter file contents. 
+**Intended use:** This app looks to create a reproducible pipeline for researchers to blind data / image files. It is designed for blinding experimental datasets prior to analysis to reduce bias. The easy-to-use GUI interface is cross-compatible with macOS and Windows, allowing for easy, reproducible access to blinding various file types. BlindSpot modifies filenames only and does not alter file contents. This can also be used in the command line. The documentation can be found here: https://pypi.org/project/Bio-BlindSpot/
 
 **For questions and Issues:** Please post an issues request on GitHub or email jennavc@unc.edu. 
 
