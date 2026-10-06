@@ -61,6 +61,8 @@ The entire program was built using Python in VS Code. The program uses Tkinter t
 
 ## Installation
 
+For more in depth installation instructions, please see the installation instruction pdf download. 
+
 BlindSpot can be downloaded as a zipped .exe file (Windows) or a zipped .app file (macOS) from this github repository. If this is the perferred method of download, no python or installation of any packages are required for use. Exe files will be updated and downloaded from the release folder for the latest version. It also can be used with the command line feature. Please go to the **To Use: (Command Line)**  section below in order to see intallation and use instructions. 
 
 The original package of code is located is available on the repository as well. The author has previous versions that are available upon request. This code was compiled using PyInstaller on the command line and was tested with the attached pytest codes. This requires the packages: os, csv, uuid, time, shutil, random, threading, pathlib, tkinter, datetime, webbrowser, and sys. All of these packages are compatible with Python v 3.13. 
